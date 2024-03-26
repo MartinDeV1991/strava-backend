@@ -39,7 +39,7 @@ router.get('/mongodb/api/endpoint', async (req, res) => {
 
 router.get('/mongodb/api/findone/:key', async (req, res) => {
   const activityId = req.params.key;
-  console.log("De activityId: ", activityId)
+  console.log("De activityId:: ", activityId)
   try {
       const stream = await collection.findOne({ _id: activityId });
       if (stream) {
