@@ -66,7 +66,7 @@ router.post('/mongodb/api/post/:key', async (req, res) => {
           // console.log("already in DB: ")
       } else {
           // console.log("not in DB yet: ")
-          const result = await collection2.updateOne(
+          const result = await collection.updateOne(
               { _id: document._id }, // Match documents by _id
               { $set: document },    // Set the entire document
               { upsert: true }       // Perform an upsert operation
