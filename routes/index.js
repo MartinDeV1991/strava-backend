@@ -4,7 +4,6 @@ const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
 const uri = process.env.mongo_path;
-console.log("mongodb path: ",uri)
 let collection;
 (async function () {
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
